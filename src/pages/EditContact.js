@@ -42,7 +42,7 @@ const navigate =useNavigate();
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`http://localhost:8000/api/contact/${id}`, {
+        const res = await fetch(`${process.env.REACT_APP_BACKEND}/contact/${id}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
