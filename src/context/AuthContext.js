@@ -30,7 +30,7 @@ export const AuthContextProvider = ({ children }) => {
       navigate("/login", { replace: true }); //CHECKING IF THE LOCAL STORAGE DO NOT HAVE TOKEN THEN THE USER IS NOT LOGGED IN
     }
     try {
-      const res = await fetch(`http://localhost:8000/api/me`, {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND}/api/me`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

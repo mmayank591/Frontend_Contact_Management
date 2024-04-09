@@ -20,7 +20,7 @@ const navigate =useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = await fetch(`http://localhost:8000/api/contact`, {
+    const res = await fetch(`${process.env.REACT_APP_BACKEND}/api/contact`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

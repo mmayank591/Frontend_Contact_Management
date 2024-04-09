@@ -16,7 +16,7 @@ const AllContact = () => {
     async function fetchData() {
       setLoading(true);
       try {
-        const res = await fetch(`http://localhost:8000/api/mycontacts`, {
+        const res = await fetch(`${process.env.REACT_APP_BACKEND}/api/mycontacts`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

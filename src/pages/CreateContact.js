@@ -18,7 +18,7 @@ const CreateContact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = await fetch(`http://localhost:8000/api/contact`, {
+    const res = await fetch(`${process.env.REACT_APP_BACKEND}/api/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
